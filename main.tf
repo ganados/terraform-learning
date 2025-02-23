@@ -8,7 +8,7 @@ module "network" {
   vpc_azs = ["eu-west-1a"]
 }
 
-module "public_security_group" {
+module "bastion_host_security_group" {
   source = "./modules/sg"
   sg_name = "public-security-group"
 
@@ -29,5 +29,5 @@ module "bastion_host" {
 
   key_pair_name = var.public_key
   subnet_id = module.network.public_subnets[0]
-  vpc_security_group_ids = [module.public_security_group.security_group_id]
+  vpc_security_group_ids = [module.bastion_host_security_group.security_group_id]
 }
