@@ -10,7 +10,7 @@ module "network" {
 
 module "bastion_host_security_group" {
   source = "./modules/sg"
-  sg_name = "public-security-group"
+  sg_name = "bastion-host-security-group"
 
   vpc_id = module.network.vpc_id
 
