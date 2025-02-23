@@ -25,7 +25,7 @@ module "bastion_host" {
   aws_region = var.aws_region
 
   ec2_name = "BastionHost"
-  ec2_t2micro_type = var.ec2_t2micro_type
+  ec2_type = var.ec2_type
 
   key_pair_name = var.public_key
   subnet_id = module.network.public_subnets[0]

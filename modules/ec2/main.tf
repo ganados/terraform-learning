@@ -24,7 +24,7 @@ module "ec2_instance" {
   version = "5.7.1"
 
   name          = var.ec2_name
-  instance_type = var.ec2_t2micro_type
+  instance_type = var.ec2_type
   ami           = data.aws_ami.al2023_ami.id
 
   key_name = var.key_pair_name

@@ -9,7 +9,7 @@ variable "ec2_name" {
   default = "ec2-instance"
 }
 
-variable "ec2_t2micro_type" {
+variable "ec2_type" {
   type    = string
   default = "t2.micro"
 }
