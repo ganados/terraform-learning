@@ -1,15 +1,15 @@
 variable "public_key" {
-  type = string
+  type        = string
   description = "SSH public key path"
 }
 
 variable "aws_region" {
-  type = string
+  type    = string
   default = "eu-west-1"
 }
 
 variable "ec2_type" {
-  type = string
+  type    = string
   default = "t2.micro"
 }
 
@@ -18,16 +18,16 @@ variable "public_ip" {
 }
 
 variable "vpc_cidr" {
-  type = string
+  type        = string
   description = "VPC cidr"
 }
 
 variable "vpc_public_subnets" {
-  type = list(string)
+  type        = list(string)
   description = "VPC public subnets cidr"
 }
 
 variable "vpc_private_subnets" {
-  type = list(string)
+  type        = list(string)
   description = "VPC private subnets cidr"
 }
