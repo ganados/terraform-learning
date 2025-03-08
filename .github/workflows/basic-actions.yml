@@ -5,19 +5,19 @@ jobs:
     Install-terraform:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+        - name: Checkout repository
+          uses: actions/checkout@v4
 
-            - name: Verify files
-              runs: ls -la
+        - name: Verify files
+          runs: ls -la
 
-            - name: Setup Terraform
-              uses: hashicorp/setup-terraform@v3
-              with:
-                  terraform_version: 1.10.5
+        - name: Setup Terraform
+          uses: hashicorp/setup-terraform@v3
+          with:
+              terraform_version: 1.10.5
 
-            - name: Terraform init
-              run: terraform init
+        - name: Terraform init
+          run: terraform init
 
-            - name: Terraform plan
-              run: terraform plan
+        - name: Terraform plan
+          run: terraform plan
