@@ -12,7 +12,7 @@ jobs:
           uses: actions/checkout@v4
 
         - name: Verify files
-          run: ls -la
+          run: ls -la | dir
 
         - name: Setup Terraform
           uses: hashicorp/setup-terraform@v3
